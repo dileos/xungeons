@@ -5,6 +5,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.xungeons.model.AssetLoader;
 
 public class XungeonsGame extends ApplicationAdapter {
 	SpriteBatch batch;
@@ -14,6 +15,7 @@ public class XungeonsGame extends ApplicationAdapter {
 	public void create () {
 		batch = new SpriteBatch();
 		img = new Texture("badlogic.jpg");
+		AssetLoader.load();
 	}
 
 	@Override
