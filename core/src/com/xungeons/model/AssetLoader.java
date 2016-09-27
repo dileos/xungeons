@@ -15,7 +15,7 @@ public class AssetLoader
 		AssetLoader.texture = new Texture(Gdx.files.internal("sprites.jpg"));
 		AssetLoader.texture.setFilter(TextureFilter.Nearest, TextureFilter.Nearest);
 		
-		AssetLoader.hero = new TextureRegion(AssetLoader.texture, 0, 0, 32, 64);
+		AssetLoader.hero = new TextureRegion(AssetLoader.texture, 190, 16, 86, 82);
 	    AssetLoader.hero.flip(false, true);
 	}
 	
