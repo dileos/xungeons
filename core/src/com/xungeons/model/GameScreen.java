@@ -5,7 +5,6 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
 public class GameScreen implements Screen {
 	Board board;
@@ -33,16 +32,14 @@ public class GameScreen implements Screen {
 	@Override
 	public void render(float delta) {
 		//TODO: update board
-		TextureRegion img = AssetLoader.hero;
+		
 		Gdx.gl.glClearColor(0.7f, 0, 0.7f, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-		this.spriteBatch.begin();
-		//this.spriteBatch.draw(img, 0, 0);
-		this.board.render(spriteBatch);
-		this.spriteBatch.end();
 		
-		//
-		//this.spriteBatch.end();
+		this.spriteBatch.begin();
+		this.spriteBatch.enableBlending();
+		this.board.render(spriteBatch);
+		this.spriteBatch.end();		
 	}
 
 	@Override

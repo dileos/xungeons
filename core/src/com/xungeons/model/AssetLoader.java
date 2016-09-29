@@ -12,7 +12,7 @@ public class AssetLoader
 	
 	public static void load()
 	{
-		AssetLoader.texture = new Texture(Gdx.files.internal("sprites.jpg"));
+		AssetLoader.texture = new Texture(Gdx.files.internal("sprites.png"));
 		AssetLoader.texture.setFilter(TextureFilter.Nearest, TextureFilter.Nearest);
 		
 		AssetLoader.hero = new TextureRegion(AssetLoader.texture, 190, 16, 86, 82);
