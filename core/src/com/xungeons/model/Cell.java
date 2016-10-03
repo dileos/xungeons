@@ -1,7 +1,11 @@
 package com.xungeons.model;
 
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+
 public class Cell 
 {
+	public static final int SIZE = 50;
+	
 	private Content content;
 	
 	public Cell(Content content)
@@ -15,5 +19,9 @@ public class Cell
 
 	public void setContent(Content content) {
 		this.content = content;
+	}
+	
+	public void render(SpriteBatch batch) {
+		this.content.render(batch);
 	}
 }

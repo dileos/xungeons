@@ -10,4 +10,9 @@ public class Hero extends GameSprite implements Updatable {
 	public void update(float delta) {
 		//TODO
 	}
+
+	@Override
+	public void interact(Hero hero) {
+		return;		
+	}
 }

@@ -6,10 +6,14 @@ import com.xungeons.model.AssetLoader;
 import com.xungeons.model.GameScreen;
 
 public class XungeonsGame extends Game {
+	private GameScreen gameScreen;
+	
 	@Override
 	public void create () {
 		Gdx.app.log("Xungeons", "Created");
 		AssetLoader.load();
-		this.setScreen(new GameScreen());
+		
+		this.gameScreen = new GameScreen();
+		this.setScreen(this.gameScreen);
 	}
 }

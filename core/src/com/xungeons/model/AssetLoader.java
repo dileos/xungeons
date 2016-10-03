@@ -10,6 +10,9 @@ public class AssetLoader
 	public static Texture texture;
 	public static TextureRegion hero;
 	
+	public static Texture floorTexture;
+	public static TextureRegion floor;
+	
 	public static void load()
 	{
 		AssetLoader.texture = new Texture(Gdx.files.internal("sprites.png"));
@@ -17,6 +20,12 @@ public class AssetLoader
 		
 		AssetLoader.hero = new TextureRegion(AssetLoader.texture, 190, 16, 86, 82);
 	    AssetLoader.hero.flip(false, true);
+	    
+	    AssetLoader.floorTexture = new Texture(Gdx.files.internal("Dirt.png"));
+		AssetLoader.floorTexture.setFilter(TextureFilter.Nearest, TextureFilter.Nearest);
+		
+		AssetLoader.floor = new TextureRegion(AssetLoader.floorTexture, 0, 0, 20, 20);
+	    AssetLoader.floor.flip(false, true);
 	}
 	
 	public static void dispose()

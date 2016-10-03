@@ -1,5 +1,9 @@
 package com.xungeons.model;
 
-public interface Content {
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
+public interface Content {
+	public void render(SpriteBatch batch);
+	
+	public void interact(Hero hero);
 }

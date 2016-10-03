@@ -14,7 +14,7 @@ public class GameScreen implements Screen {
 	
 	
 	public GameScreen() {
-		this.board = new Board(12);
+		this.board = new Board(20);
 		this.spriteBatch = new SpriteBatch();
 		
 		this.camera = new OrthographicCamera();
@@ -72,4 +72,7 @@ public class GameScreen implements Screen {
 		
 	}
 
+	public float getBoardSize() {
+		return board.getSizeInPixels();
+	}
 }
