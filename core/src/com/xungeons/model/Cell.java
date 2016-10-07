@@ -4,7 +4,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class Cell 
 {
-	public static final int SIZE = 50;
+	public static final int SIZE = 40;
 	
 	private Content content;
 	

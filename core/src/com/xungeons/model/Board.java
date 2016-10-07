@@ -1,5 +1,7 @@
 package com.xungeons.model;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 
@@ -19,7 +21,7 @@ public class Board
 		this.heroPosition[1] = 0;
 		
 		this.board = new Cell[size][size];
-		this.hero = new Hero(new Vector2(50, 50));
+		this.hero = new Hero(new Vector2(0, 0), new Vector2(Cell.SIZE, Cell.SIZE));
 		
 		this.initializeBoard();
 	}
@@ -41,11 +43,27 @@ public class Board
 	}
 	
 	public void update(float time) {
-		//TODO
+		processInput();
+		hero.setX(heroPosition[0] * Cell.SIZE);
+		hero.setY(heroPosition[1] * Cell.SIZE);
 	}
 	
-	public void onKeyPress() {
-		//TODO
+	public void processInput() {
+		int x = heroPosition[0];
+		int y = heroPosition[1];
+		
+		if(Gdx.input.isKeyJustPressed(Keys.DPAD_LEFT) && 
+				x > 0)
+	      heroPosition[0]--;
+	   if(Gdx.input.isKeyJustPressed(Keys.DPAD_RIGHT) && 
+				x < (size - 1)) 
+		   heroPosition[0]++;
+	   if(Gdx.input.isKeyJustPressed(Keys.DPAD_UP) && 
+				y > 0)
+		   heroPosition[1]--;
+	   if(Gdx.input.isKeyJustPressed(Keys.DPAD_DOWN) && 
+				y < (size - 1))  
+		   heroPosition[1]++;
 	}
 	
 	public void render(SpriteBatch batch) {

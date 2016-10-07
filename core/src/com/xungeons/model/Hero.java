@@ -7,6 +7,10 @@ public class Hero extends GameSprite implements Updatable {
 		super(AssetLoader.hero, initialPosition);
 	}
 	
+	public Hero(Vector2 initialPosition, Vector2 size) {
+		super(AssetLoader.hero, initialPosition, size);
+	}
+	
 	public void update(float delta) {
 		//TODO
 	}

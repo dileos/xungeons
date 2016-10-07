@@ -31,7 +31,7 @@ public class GameScreen implements Screen {
 
 	@Override
 	public void render(float delta) {
-		//TODO: update board
+		update(delta);
 		
 		Gdx.gl.glClearColor(0.7f, 0, 0.7f, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
@@ -74,5 +74,9 @@ public class GameScreen implements Screen {
 
 	public float getBoardSize() {
 		return board.getSizeInPixels();
+	}
+	
+	private void update(float time) {
+		board.update(time);
 	}
 }
