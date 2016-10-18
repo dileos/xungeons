@@ -24,4 +24,8 @@ public class Cell
 	public void render(SpriteBatch batch) {
 		this.content.render(batch);
 	}
+	
+	public boolean canWalkOver() {
+		return this.content.canWalkOver();
+	}
 }

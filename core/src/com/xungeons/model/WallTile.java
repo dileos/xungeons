@@ -2,14 +2,14 @@ package com.xungeons.model;
 
 import com.badlogic.gdx.math.Vector2;
 
-public class FloorTile extends GameSprite {
+public class WallTile extends GameSprite {
 
-	public FloorTile(Vector2 position) {
-		super(AssetLoader.floor, position);
+	public WallTile(Vector2 position) {
+		super(AssetLoader.wall, position);
 	}
 	
-	public FloorTile(Vector2 position, Vector2 size) {
-		super(AssetLoader.floor, position, size);
+	public WallTile(Vector2 position, Vector2 size) {
+		super(AssetLoader.wall, position, size);
 	}
 
 	@Override
@@ -20,7 +20,7 @@ public class FloorTile extends GameSprite {
 
 	@Override
 	public boolean canWalkOver() {
-		return true;
+		return false;
 	}
 
 }

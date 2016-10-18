@@ -13,6 +13,9 @@ public class AssetLoader
 	public static Texture floorTexture;
 	public static TextureRegion floor;
 	
+	public static Texture wallTexture;
+	public static TextureRegion wall;
+	
 	public static void load()
 	{
 		AssetLoader.texture = new Texture(Gdx.files.internal("sprites.png"));
@@ -26,6 +29,12 @@ public class AssetLoader
 		
 		AssetLoader.floor = new TextureRegion(AssetLoader.floorTexture, 0, 0, 20, 20);
 	    AssetLoader.floor.flip(false, true);
+	    
+	    AssetLoader.wallTexture = new Texture(Gdx.files.internal("Wall_library.png"));
+		AssetLoader.wallTexture.setFilter(TextureFilter.Nearest, TextureFilter.Nearest);
+		
+		AssetLoader.wall = new TextureRegion(AssetLoader.wallTexture, 0, 0, 20, 20);
+	    AssetLoader.wall.flip(false, true);
 	}
 	
 	public static void dispose()

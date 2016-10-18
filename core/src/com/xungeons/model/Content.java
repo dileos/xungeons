@@ -6,4 +6,6 @@ public interface Content {
 	public void render(SpriteBatch batch);
 	
 	public void interact(Hero hero);
+	
+	public boolean canWalkOver();
 }
